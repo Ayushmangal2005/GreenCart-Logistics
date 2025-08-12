@@ -152,7 +152,7 @@ npm run seed
 ```
 
 The application will be available at:
-- Frontend: http://localhost:3000
+- Frontend: https://green-cart-logistics-pearl.vercel.app/
 - Backend API: https://greencart-logistics-vdss.onrender.com/
 
 ## 🎯 Core Features
