@@ -1,0 +1,48 @@
+{
+  "name": "greencart-logistics-backend",
+  "version": "1.0.0",
+  "description": "Backend for GreenCart Logistics - Delivery Simulation & KPI Dashboard",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --verbose",
+    "test:watch": "jest --watch",
+    "seed": "node src/loaders/seedData.js",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix"
+  },
+  "keywords": ["logistics", "delivery", "simulation", "kpi", "dashboard"],
+  "author": "GreenCart Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.6.3",
+    "bcryptjs": "^2.4.3",
+    "jsonwebtoken": "^9.0.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.1.0",
+    "express-rate-limit": "^7.1.5",
+    "joi": "^17.11.0",
+    "dotenv": "^16.3.1",
+    "csv-parser": "^3.0.0",
+    "moment": "^2.29.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "nodemon": "^3.0.1",
+    "eslint": "^8.53.0",
+    "mongodb-memory-server": "^9.1.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "setupFilesAfterEnv": ["<rootDir>/src/tests/setup.js"],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js",
+      "!src/loaders/seedData.js"
+    ]
+  }
+}
